@@ -1,0 +1,17 @@
+# Default runtime for TinyLlama-based experiments (override via env or CLI).
+
+model:
+  # Chat-tuned 1.1B model; swap for a local path if you mirror weights offline.
+  model_id: "TinyLlama/TinyLlama-1.1B-Chat-v1.0"
+  trust_remote_code: false
+  # "auto" uses accelerate when CUDA is available; "cpu" forces CPU.
+  device_map: "auto"
+  # torch dtype: "auto" picks bf16 on CUDA when supported, else fp16/fp32.
+  torch_dtype: "auto"
+
+generation:
+  max_new_tokens: 256
+  temperature: 0.7
+  top_p: 0.9
+  do_sample: true
+  repetition_penalty: 1.0
