@@ -1,0 +1,80 @@
+{
+  "nq_open": {
+    "dataset": "nq_open",
+    "num_samples": 200,
+    "model_id": "TinyLlama/TinyLlama-1.1B-Chat-v1.0",
+    "judge_backend": "gemini",
+    "judge_model_id": "gemini-2.5-flash",
+    "generation": {
+      "max_new_tokens": 96,
+      "temperature": 0.2,
+      "top_p": 0.9,
+      "do_sample": true,
+      "repetition_penalty": 1.0
+    },
+    "duplication_strategy": "double_query",
+    "reference_policy": "first",
+    "aggregate": {
+      "single_win_rate": 0.21,
+      "duplicated_win_rate": 0.345,
+      "tie_rate": 0.445,
+      "hallucination_rate_single": 0.75,
+      "hallucination_rate_duplicated": 0.705,
+      "hallucination_delta_duplicated_minus_single": -0.045,
+      "win_rate_delta_duplicated_minus_single": 0.135,
+      "judge_parse_ok_rate": 1.0
+    }
+  },
+  "truthfulqa": {
+    "dataset": "truthfulqa",
+    "num_samples": 200,
+    "model_id": "TinyLlama/TinyLlama-1.1B-Chat-v1.0",
+    "judge_backend": "gemini",
+    "judge_model_id": "gemini-2.5-flash",
+    "generation": {
+      "max_new_tokens": 96,
+      "temperature": 0.2,
+      "top_p": 0.9,
+      "do_sample": true,
+      "repetition_penalty": 1.0
+    },
+    "duplication_strategy": "double_query",
+    "reference_policy": "first",
+    "aggregate": {
+      "single_win_rate": 0.255,
+      "duplicated_win_rate": 0.215,
+      "tie_rate": 0.53,
+      "hallucination_rate_single": 0.765,
+      "hallucination_rate_duplicated": 0.77,
+      "hallucination_delta_duplicated_minus_single": 0.005,
+      "win_rate_delta_duplicated_minus_single": -0.04,
+      "judge_parse_ok_rate": 1.0
+    }
+  },
+  "popqa": {
+    "dataset": "popqa",
+    "num_samples": 200,
+    "model_id": "TinyLlama/TinyLlama-1.1B-Chat-v1.0",
+    "judge_backend": "gemini",
+    "judge_model_id": "gemini-2.5-flash",
+    "generation": {
+      "max_new_tokens": 96,
+      "temperature": 0.2,
+      "top_p": 0.9,
+      "do_sample": true,
+      "repetition_penalty": 1.0
+    },
+    "duplication_strategy": "double_query",
+    "reference_policy": "first",
+    "aggregate": {
+      "single_win_rate": 0.07,
+      "duplicated_win_rate": 0.19,
+      "tie_rate": 0.74,
+      "hallucination_rate_single": 0.94,
+      "hallucination_rate_duplicated": 0.845,
+      "hallucination_delta_duplicated_minus_single": -0.095,
+      "win_rate_delta_duplicated_minus_single": 0.12,
+      "judge_parse_ok_rate": 1.0
+    }
+  }
+}

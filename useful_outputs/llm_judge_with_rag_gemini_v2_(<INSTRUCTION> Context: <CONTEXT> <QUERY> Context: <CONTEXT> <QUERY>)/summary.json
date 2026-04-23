@@ -1,0 +1,26 @@
+{
+  "num_samples": 200,
+  "model_id": "TinyLlama/TinyLlama-1.1B-Chat-v1.0",
+  "judge_backend": "gemini",
+  "judge_model_id": "gemini-2.5-flash",
+  "generation": {
+    "max_new_tokens": 96,
+    "temperature": 0.2,
+    "top_p": 0.9,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "duplication_strategy": "sandwich",
+  "evidence_source": "auto",
+  "generator_context": "auto",
+  "aggregate": {
+    "standard_rag_win_rate": 0.42,
+    "sandwich_win_rate": 0.36,
+    "tie_rate": 0.22,
+    "hallucination_rate_standard_rag": 0.49,
+    "hallucination_rate_sandwich": 0.46,
+    "hallucination_delta_sandwich_minus_standard": -0.03,
+    "win_rate_delta_sandwich_minus_standard": -0.06,
+    "judge_parse_ok_rate": 1.0
+  }
+}
